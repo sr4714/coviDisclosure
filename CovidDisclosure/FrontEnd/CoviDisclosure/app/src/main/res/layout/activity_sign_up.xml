@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/initial_choice_background"
+    android:orientation="vertical"
+    android:paddingLeft="48dp"
+    android:paddingTop="20dp"
+    android:paddingRight="48dp"
+    android:paddingBottom="96dp"
+    tools:context=".SignUpActivity">
+
+    <TextView
+        android:id="@+id/textViewReturn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end"
+        android:onClick="gotoLogin"
+        android:text="Log in"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textColor="#404753"
+        android:textSize="20dp" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- android:onClick="gotoSignUp" -->
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="35dp" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="match_parent"
+            android:layout_height="225dp"
+            app:srcCompat="@drawable/login_logo" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="25dp"
+            android:layout_weight="1" />
+
+        <EditText
+            android:id="@+id/editTextFirstName"
+            style="@style/editText_style"
+            android:fontFamily="sans-serif"
+            android:hint="Firstname"
+            android:inputType="textEmailAddress" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <EditText
+            android:id="@+id/editTextLastName"
+            style="@style/editText_style"
+            android:fontFamily="sans-serif"
+            android:hint="Lastname"
+            android:inputType="textCapSentences" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <EditText
+            android:id="@+id/editTextEmailAddressUser"
+            style="@style/editText_style"
+            android:fontFamily="sans-serif"
+            android:hint="Email"
+            android:inputType="textEmailAddress" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <EditText
+            android:id="@+id/editTextPassword"
+            style="@style/editText_style"
+            android:fontFamily="sans-serif"
+            android:hint="Password"
+            android:inputType="textPassword" />
+
+        <Space
+            android:layout_width="match_parent"
+            android:layout_height="5dp" />
+
+        <Button
+            android:id="@+id/button_signUp"
+            style="@style/button_style"
+            android:onClick="gotoLogin"
+            android:text="Create Account"
+            android:textAllCaps="false" />
+    </LinearLayout>
+
+
+</LinearLayout>

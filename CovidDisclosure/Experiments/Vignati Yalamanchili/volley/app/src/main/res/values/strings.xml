@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">volley</string>
+    <string name="buttonS">self description</string>
+    <string name="text">Response</string>
+</resources>

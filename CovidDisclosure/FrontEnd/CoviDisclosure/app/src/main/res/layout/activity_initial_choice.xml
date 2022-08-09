@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/initial_choice_background"
+    android:orientation="vertical"
+    android:paddingLeft="48dp"
+    android:paddingTop="96dp"
+    android:paddingRight="48dp"
+    android:paddingBottom="96dp"
+    tools:context=".InitialChoiceActivity">
+
+    <!-- android:onClick="gotoNext" -->
+
+    <TextView
+        android:id="@+id/textViewWelcome"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="Welcome" />
+
+    <Button
+        android:id="@+id/button_viewStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:onClick="gotoViewStats"
+        android:text="View Statistics"
+        style="@style/button_style"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+
+    <Button
+        android:id="@+id/button_submitStatistics"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:onClick="gotoSubmitStats"
+        android:text="Submit Statistics"
+        style="@style/button_style"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large" />
+</LinearLayout>

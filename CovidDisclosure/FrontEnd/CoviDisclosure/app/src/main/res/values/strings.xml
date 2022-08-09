@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">CoviDisclosure</string>
+    <string name="posturl">coms-309-vb-08.cs.iastate.edu:8080/login</string>
+    <string name="geturl">coms-309-vb-08.cs.iastate.edu:8080/login/4</string>
+</resources>

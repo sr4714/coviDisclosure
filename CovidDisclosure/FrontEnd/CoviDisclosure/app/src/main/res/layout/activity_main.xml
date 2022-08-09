@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/initial_choice_background"
+    android:orientation="vertical"
+    android:paddingLeft="48dp"
+    android:paddingTop="96dp"
+    android:paddingRight="48dp"
+    android:paddingBottom="96dp"
+    tools:context=".MainActivity">
+
+    <!-- potential LinearLayout should go here -->
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="match_parent"
+        android:layout_height="225dp"
+        app:srcCompat="@drawable/login_logo" />
+
+    <TextView
+        android:id="@+id/textView_companyName"
+        android:layout_width="match_parent"
+        android:layout_height="90dp"
+        android:gravity="center"
+        android:text="CoviDisclosure"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        android:textColor="#404753" />
+
+    <EditText
+        android:id="@+id/editTextTextEmailAddress"
+        style="@style/editText_style"
+        android:fontFamily="sans-serif"
+        android:hint="Email"
+        android:inputType="textEmailAddress" />
+
+    <EditText
+        android:id="@+id/editTextTextPassword"
+        style="@style/editText_style"
+        android:layout_width="match_parent"
+        android:fontFamily="sans-serif"
+        android:hint="Password"
+        android:inputType="textPassword" />
+
+    <Button
+        android:id="@+id/button_login"
+        style="@style/button_style"
+        android:text="Log In"
+        android:onClick="gotoNext"
+        android:textAllCaps="false" />
+
+    <TextView
+        android:id="@+id/textViewForgotPassword"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_horizontal"
+        android:text="Forgot Password?"
+        android:textColor="#888888" />
+
+    <TextView
+        android:id="@+id/textViewSignUp"
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        android:gravity="center_horizontal"
+        android:text="Sign Up"
+        android:onClick="gotoSignUp"
+        android:textColor="#888888" />
+    <!-- onclick for sign up -->
+    <!-- potential LinearLayout should go here -->
+
+</LinearLayout>

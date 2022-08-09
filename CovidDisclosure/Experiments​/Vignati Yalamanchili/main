@@ -1,0 +1,197 @@
+package com.example.calc;
+
+import androidx.appcompat.app.AppCompatActivity;
+import android.widget.Button;
+import android.widget.TextView ;
+import android.os.Bundle;
+import android.view.View;
+
+
+public class MainActivity extends AppCompatActivity {
+    private Button zero;
+    private Button one;
+    private Button two;
+    private Button three;
+    private Button four;
+    private Button five;
+    private Button six;
+    private Button seven;
+    private Button eight;
+    private Button nine;
+    private Button add;
+    private Button sub;
+    private Button equal;
+    private Button clear;
+    private TextView input;
+    private TextView output;
+    private final char Add= '+';
+    private final char Sub = '-';
+    private final char Equals = '0';
+    private double val1 = Double.NaN;
+    private double val2;
+    private char act;
+
+    public MainActivity() {
+    }
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+
+        setupUIViews();
+        zero.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"0");
+            }
+        });
+        one.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"1");
+            }
+        });
+        two.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"2");
+            }
+        });
+        three.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"3");
+            }
+        });
+        four.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"1");
+            }
+        });
+        five.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"5");
+            }
+        });
+        six.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"6");
+            }
+        });
+        seven.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"7");
+            }
+        });
+        eight.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"8");
+            }
+        });
+        nine.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                input.setText(input.getText().toString()+"9");
+            }
+        });
+        add.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                compute();
+                act = Add;
+                output.setText(String.valueOf(val1) + "+" );
+                input.setText(null);
+            }
+        });
+        sub.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                compute();
+                act = Sub;
+                output.setText(String.valueOf(val1) + "-" );
+                input.setText(null);
+            }
+        });
+        equal.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                compute();
+                act = Equals;
+                output.setText(output.getText().toString()+ String.valueOf(val2) + "=" + String.valueOf(val1));// 1+1 =2
+                input.setText(null);
+            }
+        });
+        clear.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+                if(input.getText().length()>0){
+                    CharSequence sec = input.getText().toString();
+                    input.setText(sec.subSequence(0, sec.length()-1));
+                }
+                else{
+                    val1 = Double.NaN;
+                    val2 = Double.NaN;
+                    input.setText(null);
+                    output.setText(null);
+                }
+            }
+        });
+    }
+
+    private void setupUIViews(){
+        zero =(Button) findViewById(R.id.button3);
+        one =(Button) findViewById(R.id.button15);
+        two =(Button) findViewById(R.id.button5);
+        three =(Button) findViewById(R.id.button4);
+        four =(Button) findViewById(R.id.button9);
+        five =(Button) findViewById(R.id.button8);
+        six =(Button) findViewById(R.id.button7);
+        seven =(Button) findViewById(R.id.button12);
+        eight =(Button) findViewById(R.id.button11);
+        nine =(Button) findViewById(R.id.button10);
+        add =(Button) findViewById(R.id.button);
+        sub =(Button) findViewById(R.id.button2);
+        equal =(Button) findViewById(R.id.button14);
+        clear =(Button) findViewById(R.id.button13);
+        input = (TextView)findViewById(R.id.Input);
+        output = (TextView)findViewById(R.id.Output);
+    }
+    private void compute(){
+        if(!Double.isNaN(val1)){
+            val2 = Double.parseDouble(input.getText().toString());
+            switch (act){
+                case Add:
+                    val1 = val1+val2;
+                    break;
+                case Sub:
+                    val1 = val1-val2;
+                    break;
+                case Equals:
+                    break;
+            }
+        }
+        else{
+            val1= Double.parseDouble(input.getText().toString());
+        }
+    }
+}

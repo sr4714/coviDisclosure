@@ -1,0 +1,7 @@
+# files im ignoring
+*.properties
+gradlew.exe
+*.gradle
+gradlew.bat
+gradle/
+
